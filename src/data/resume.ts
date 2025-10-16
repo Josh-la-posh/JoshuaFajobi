@@ -12,6 +12,8 @@ export type JsonResume = {
     location?: { city?: string; countryCode?: string };
     summary?: string;
     profiles?: { network: string; username?: string; url?: string }[];
+    availability?: string; // e.g., "Open to remote roles across EMEA"
+    workAuthorization?: string; // e.g., visas or status
   };
   work: {
     name: string;
@@ -41,6 +43,9 @@ export type JsonResume = {
     startDate?: string;
     endDate?: string;
   }[];
+  achievements?: string[]; // curated cross-role impact bullets
+  certifications?: { name: string; issuer?: string; date?: string; url?: string }[];
+  languages?: { language: string; fluency?: string }[];
 };
 
 export const resume: JsonResume = {
@@ -48,24 +53,26 @@ export const resume: JsonResume = {
   basics: {
     name: "Joshua Fajobi",
     label: "Frontend Engineer (Web & Mobile)",
-    email: "you@email.com",
-    phone: "+234-000-000-0000",
-    url: "https://your-portfolio.com",
+    email: "joshuamayowa23@yahoo.com",
+    phone: "+2348102513974",
+    url: "https://joshua-fajobi.vercel.app/",
     location: { city: "Lagos", countryCode: "NG" },
     summary:
       "Frontend engineer focused on performant, accessible product experiences. React (Vite/Next.js), TypeScript, Flutter. Comfortable owning UI architecture, DX, and shipping outcomes.",
     profiles: [
-      { network: "LinkedIn", url: "https://linkedin.com/in/your-handle" },
-      { network: "GitHub", url: "https://github.com/your-handle" },
-      { network: "X/Twitter", url: "https://twitter.com/your-handle" },
+      { network: "LinkedIn", url: "https://www.linkedin.com/in/jfajobi/" },
+      { network: "GitHub", url: "https://github.com/Josh-la-posh" },
+      { network: "Portfolio", url: "https://joshua-fajobi.vercel.app/" },
     ],
+    availability: "Open to remote & hybrid roles across EMEA",
+    workAuthorization: "Eligible to work in Nigeria; remote collaboration globally",
   },
 
   work: [
     {
       name: "ChamsSwitch",
       position: "Lead Frontend Developer",
-      url: "https://merchant.pelpay.ng",
+      url: "https://www.chamsswitch.com/",
       startDate: "2024-09",
       endDate: undefined,
       summary:
@@ -147,6 +154,51 @@ export const resume: JsonResume = {
   ],
 
   education: [
-    // Optional
+    {
+      institution: "University of Lagos",
+      studyType: "BSc",
+      area: "Mechanical Engineering",
+      startDate: "2016-10",
+      endDate: "2021-09",
+    },
+  ],
+
+  achievements: [
+    "15% increase in subscription renewals (BetaCare)",
+    "30% reduction in failed consultations (BetaCare)",
+    "Shared component system reducing duplicate UI by ~40% (ChamsSwitch)",
+    "Pagination & caching strategy improving load times on data-heavy pages (ChamsSwitch)",
+  ],
+
+  certifications: [
+    {
+      name: "Programming with JavaScript",
+      issuer: "Meta",
+      date: "2022-10",
+      url: "https://www.coursera.org/account/accomplishments/certificate/C3AW7ALWGAZJ",
+    },
+    {
+      name: "Front-End Web Development with React",
+      issuer: "Coursera",
+      date: "2022-10",
+      url: "https://www.coursera.org/account/accomplishments/certificate/YM3DWUNEXUXX",
+    },
+    {
+      name: "Responsive Web Design",
+      issuer: "freeCodeCamp",
+      date: "2021-10",
+      url: "https://www.freecodecamp.org/certification/fcccf5a9bdd-2069-4c0a-b202-4fbc6c32b272/responsive-web-design",
+    },
+    {
+      name: "Foundations of User Experience (UX) Design",
+      issuer: "Google",
+      date: "2022-07",
+      url: "https://www.coursera.org/account/accomplishments/certificate/VGMLJ6K7J43L",
+    },
+  ],
+
+  languages: [
+    { language: "Yoruba", fluency: "Native" },
+    { language: "English", fluency: "Native" },
   ],
 };

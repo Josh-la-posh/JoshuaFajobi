@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Unified merchant dashboard, admin console, and payment gateway with a shared design system and faster builds.",
     cover: "/images/projects/chamsswitch/cover.png",
     links: [
-      { label: "Merchant Dashboard", url: "https://merchant.pelpay.ng" },
+      { label: "Merchant Dashboard", url: "https://www.chamsswitch.com" },
       // { label: "Admin", url: "https://admin.pelpay.ng" } // add if public
     ],
     problem: [

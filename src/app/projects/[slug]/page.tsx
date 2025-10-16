@@ -4,12 +4,13 @@ import CaseStudyLayout from "@/components/portfolio/CaseStudyLayout";
 
 export function generateStaticParams() {
   return projects
-    .filter(p => p.kind === "case-study")
+    .filter(p => p?.kind === "case-study")
     .map(p => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const p = projects.find(x => x.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const p = projects.find(x => x.slug === slug);
   if (!p) return {};
   return {
     title: `${p.title} – Case Study`,
@@ -18,10 +19,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ProjectSlugPage({ params }: { params: { slug: string } }) {
-  const p = projects.find(x => x.slug === params.slug);
+export default async function ProjectSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const p = projects.find(x => x.slug === slug);
   if (!p || p.kind !== "case-study") return notFound();
-
   return (
     <div className="mx-auto max-w-6xl p-6">
       <CaseStudyLayout p={p} />

@@ -34,7 +34,7 @@ export function ClientResume() {
   async function downloadPDF() {
     try {
       setDownloading(true);
-      const res = await fetch("/api/resume.pdf");
+      const res = await fetch("/resume.pdf");
       const blob = await res.blob();
       saveAs(blob, "JoshuaFajobi-Resume.pdf");
     } finally {
@@ -46,14 +46,14 @@ export function ClientResume() {
     <div className="flex flex-wrap gap-2">
       <Button onClick={downloadPDF} isLoading={downloading}>Download PDF</Button>
       <a
-        href="/api/resume"
+        href="/api/resume.json"
         className="inline-flex items-center justify-center rounded-lg border border-border bg-card px-4 py-2 text-sm hover:bg-border/40"
         target="_blank"
         rel="noreferrer"
       >View JSON</a>
       <Button
         variant="secondary"
-        onClick={() => navigator.clipboard.writeText(`${window.location.origin}/api/resume`)}
+        onClick={() => navigator.clipboard.writeText(`${window.location.origin}/api/resume.json`)}
       >Copy JSON Link</Button>
     </div>
   );

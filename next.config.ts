@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
-      { protocol: "https", hostname: "merchant.pelpay.ng" },
+      { protocol: "https", hostname: "www.chamsswitch.com" },
       { protocol: "https", hostname: "www.betacare.ng" },
       { protocol: "https", hostname: "apps.apple.com" },
     ],
