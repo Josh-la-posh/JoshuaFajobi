@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "src/app/resume.pdf/route.tsx": {
+      "memory": 256,
+      "maxDuration": 10
+    },
+    "src/app/api/resume/route.tsx": {
+      "memory": 256,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "NEXT_TELEMETRY_DISABLED": "1"
+  },
+  "routes": [
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" }
+  ],
+  "github": {
+    "silent": true
+  }
+}

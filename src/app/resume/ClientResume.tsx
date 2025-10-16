@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { resume } from "@/data/resume";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   isLoading?: boolean;

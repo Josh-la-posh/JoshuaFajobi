@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { cn } from "@/utils/cn";
 import type { Project } from "@/data/projects";
 
 export default function CaseStudyLayout({ p }: { p: Project }) {

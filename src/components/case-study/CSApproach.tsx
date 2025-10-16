@@ -1,4 +1,5 @@
 import { CSStep } from "@/lib/caseStudies";
+import Image from "next/image";
 
 export function CSApproach({ steps }: { steps: CSStep[] }) {
   return (
@@ -10,7 +11,7 @@ export function CSApproach({ steps }: { steps: CSStep[] }) {
           {s.detail && <p className="mt-2 text-sm text-muted">{s.detail}</p>}
           {s.media?.src && (
             <figure className="mt-3">
-              <img
+              <Image
                 src={s.media.src}
                 alt={s.media.alt ?? s.title}
                 className="w-full rounded-lg border border-border object-cover"

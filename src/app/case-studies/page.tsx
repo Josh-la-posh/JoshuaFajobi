@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { caseStudies } from "@/lib/caseStudies";
 
 export const metadata = {
@@ -20,9 +21,11 @@ export default function CaseStudiesIndex() {
             className="rounded-2xl border border-border bg-card p-5 shadow-soft transition hover:shadow-lg"
           >
             {cs.hero?.src && (
-              <img
+              <Image
                 src={cs.hero.src}
                 alt={cs.hero.alt ?? cs.title}
+                width={800}
+                height={450}
                 className="mb-3 aspect-video w-full rounded-xl object-cover"
               />
             )}

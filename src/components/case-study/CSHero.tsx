@@ -1,4 +1,5 @@
 import { CaseStudy } from "@/lib/caseStudies";
+import Image from "next/image";
 
 export function CSHero({ cs }: { cs: CaseStudy }) {
   return (
@@ -17,7 +18,7 @@ export function CSHero({ cs }: { cs: CaseStudy }) {
           </div>
         </div>
         {cs.hero?.src && (
-          <img
+          <Image
             src={cs.hero.src}
             alt={cs.hero.alt ?? cs.title}
             className="aspect-video w-full max-w-md rounded-xl border border-border object-cover md:w-96"

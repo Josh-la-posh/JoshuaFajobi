@@ -73,12 +73,13 @@ function zodResolver<TSchema extends z.ZodTypeAny>(schema: TSchema) {
         if (parsed.success) {
             return { values: parsed.data, errors: {} };
         }
-        const fieldErrors: Record<string, any> = {};
+        type FieldError = { type: string; message: string };
+        const fieldErrors: Record<string, FieldError> = {};
         for (const issue of parsed.error.issues) {
             const path = issue.path.join(".");
             fieldErrors[path] = {
                 type: issue.code,
-                message: issue.message
+                message: issue.message,
             };
         }
         return { values: {}, errors: fieldErrors };
