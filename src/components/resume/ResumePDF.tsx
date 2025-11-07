@@ -166,6 +166,31 @@ export function ResumePDF({ data }: { data: JsonResume }) {
           </View>
         )}
 
+        {/* Products & Apps */}
+        {!!data.products?.length && (
+          <View style={styles.section}>
+            <Text style={styles.h2}>Products & Apps</Text>
+            {data.products.map((prod, i) => (
+              <View key={i} style={{ marginBottom: SP * 3 }}>
+                <Text style={styles.h3}>{prod.name} <Text style={styles.smallMuted}>({prod.platform})</Text></Text>
+                {prod.url && (
+                  <Link src={prod.url}>
+                    <Text style={{ color: "#2563eb" }}>{prod.url}</Text>
+                  </Link>
+                )}
+                {prod.description && <Text>{prod.description}</Text>}
+                {prod.stack?.length ? (
+                  <View style={{ marginTop: SP, flexDirection: "row", flexWrap: "wrap" }}>
+                    {prod.stack.slice(0, 8).map((k, idx) => (
+                      <Text key={idx} style={styles.chip}>{k}</Text>
+                    ))}
+                  </View>
+                ) : null}
+              </View>
+            ))}
+          </View>
+        )}
+
         {/* Education Placeholder */}
         {data.education?.length ? (
           <View style={styles.section}>

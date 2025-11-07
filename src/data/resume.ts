@@ -32,6 +32,13 @@ export type JsonResume = {
     highlights?: string[];
     roles?: string[];
   }[];
+  products?: {
+    name: string;
+    platform: string; // e.g., Web, iOS, Android, Cross-platform
+    description?: string;
+    url?: string; // store or live URL
+    stack?: string[];
+  }[];
   skills?: {
     name: string;
     keywords: string[];
@@ -145,6 +152,49 @@ export const resume: JsonResume = {
     url: p.links?.[0]?.href,
     highlights: p.impact,
   })),
+
+  products: [
+    {
+      name: "ChamsSwitch Merchant Dashboard",
+      platform: "Web",
+      description: "Payment gateway flows, merchant onboarding, dashboards.",
+      url: "https://www.chamsswitch.com/", // main site; replace with direct app URL if available
+      stack: ["React", "TypeScript", "TanStack Query", "Zustand"],
+    },
+    {
+      name: "BetaCare Telehealth Platform",
+      platform: "Web + Mobile",
+      description: "Subscriptions, audio/video consults, scheduling, admin portal.",
+      url: "https://www.betacare.ng",
+      stack: ["Next.js", "Flutter", "Node.js", "PostgreSQL", "AWS"],
+    },
+    {
+      name: "Currency Exchange App",
+      platform: "Mobile (Flutter)",
+      description: "Real-time FX rates, charts, offline caching.",
+      stack: ["Flutter", "GetX"],
+    },
+    {
+      name: "Ride-Hailing App",
+      platform: "Mobile (Flutter)",
+      description: "Driver & rider booking flows, live trips, maps integration.",
+      url: "https://apps.apple.com/ng/app/touramp-customer/id6639614324",
+      stack: ["Flutter", "Firebase"],
+    },
+    {
+      name: "School Management Platform",
+      platform: "Web",
+      description: "Attendance, grading, roles, ID cards.",
+      url: "https://www.oponeko.com",
+      stack: ["React", "Vite", "Tailwind"],
+    },
+    {
+      name: "Health Station Apps",
+      platform: "Web + Mobile",
+      description: "Consultations, booking, patient history, multi-platform.",
+      stack: ["React", "Flutter"],
+    },
+  ],
 
   skills: [
     { name: "Frontend", keywords: ["React", "Vite", "Next.js", "TypeScript", "Tailwind"] },

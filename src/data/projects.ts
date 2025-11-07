@@ -103,6 +103,7 @@ export const projects: Project[] = [
       "Dual apps for riders/drivers with booking flows and live trip updates.",
     links: [
       { label: "iOS App", url: "https://apps.apple.com/ng/app/touramp-customer/id6639614324" },
+      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.touramp.customerapp" },
     ],
   },
   {
@@ -128,7 +129,7 @@ export const projects: Project[] = [
       "Web + mobile apps for doctor–patient consultations, booking, and history.",
     links: [
       { label: "iOS App", url: "https://apps.apple.com/ng/app/fast-care/id6749287064" },
-      // { label: "Android", url: "…" }
+      { label: "Android", url: "https://play.google.com/store/apps/details?id=com.healthstation.fastcare" }
     ],
   },
 ];
