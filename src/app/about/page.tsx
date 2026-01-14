@@ -156,7 +156,7 @@ export default function AboutPage() {
         <div className="mt-4 flex justify-center gap-4">
           <a
             href="/contact"
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90"
+            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-foreground hover:bg-primary/90"
           >
             Get in Touch
           </a>

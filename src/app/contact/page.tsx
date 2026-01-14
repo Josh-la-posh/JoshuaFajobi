@@ -104,7 +104,7 @@ export default function ContactPage() {
         {/* Contact Form */}
         <div className="lg:col-span-3">
           <div className="rounded-xl border border-border bg-card p-6">
-            <h2 className="font-semibold">Send a Message</h2>
+            <h2 className="font-semibold text-foreground">Send a Message</h2>
 
             {status === "success" && (
               <div className="mt-4 flex items-center gap-2 rounded-lg bg-green-500/10 p-3 text-green-600 dark:text-green-400">
@@ -171,7 +171,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white transition hover:bg-primary/90 disabled:opacity-50"
+                className="w-full rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/90 disabled:opacity-50"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
