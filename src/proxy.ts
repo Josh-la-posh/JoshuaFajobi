@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-// Minimal security headers middleware. Extend CSP as needed.
-export function middleware() {
+// Minimal security headers proxy. Extend CSP as needed.
+export function proxy() {
   const response = NextResponse.next();
   response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-Content-Type-Options", "nosniff");
