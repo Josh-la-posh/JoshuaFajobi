@@ -2,11 +2,9 @@
   "version": 2,
   "functions": {
     "src/app/resume.pdf/route.tsx": {
-      "memory": 256,
       "maxDuration": 10
     },
     "src/app/api/resume/route.tsx": {
-      "memory": 256,
       "maxDuration": 10
     }
   },
