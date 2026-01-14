@@ -43,7 +43,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Built end-to-end doctor–patient consults: subscriptions, A/V calls, chat, shift scheduling, and an admin portal.",
     tags: ["Next.js", "Node", "PostgreSQL", "Agora", "Flutter"],
-    hero: { src: "/cs/betacare-hero.png", alt: "BetaCare hero mock" },
+    hero: { src: "/cs/betacare-hero.svg", alt: "BetaCare hero mock" },
     problem:
       "BetaCare needed a reliable telehealth workflow with paid subscriptions, shift-based scheduling, and secure A/V—under tight timelines.",
     constraints: [
@@ -108,7 +108,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Merchant onboarding, payment dashboards, and gateway flows with a shared UI kit and performance budgets.",
     tags: ["React", "TypeScript", "Zustand", "TanStack Query", "Tailwind"],
-    hero: { src: "/cs/chams-hero.png", alt: "ChamsSwitch dashboard" },
+    hero: { src: "/cs/chams-hero.svg", alt: "ChamsSwitch dashboard" },
     problem:
       "Existing dashboards were slow and fragmented across domains; onboarding was manual and error-prone.",
     approach: [

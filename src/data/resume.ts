@@ -95,7 +95,7 @@ export const resume: JsonResume = {
       position: "Fullstack Developer",
       url: "https://www.betacare.ng",
       startDate: "2025-04",
-      endDate: undefined,
+      endDate: "2025-09",
       summary:
         "Telehealth subscriptions, audio/video consults, shift scheduling & admin ops.",
       highlights: [

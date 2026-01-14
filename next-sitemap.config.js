@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://your-domain.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://joshua-fajobi.vercel.app",
   generateRobotsTxt: true,
 };
