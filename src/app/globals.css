@@ -45,3 +45,12 @@ body {
   color-scheme: light dark;
   transition: background-color .25s ease, color .25s ease;
 }
+
+/* Hide scrollbar for carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
