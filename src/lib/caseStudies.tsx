@@ -37,8 +37,8 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "betacare-telehealth",
     title: "BetaCare — Telehealth Platform",
-    client: "BetaCare",
-    period: "2024 — Present",
+    client: "Nitax Technologies Limited",
+    period: "2025",
     role: "Full-stack (Next.js + Node + Flutter)",
     summary:
       "Built end-to-end doctor–patient consults: subscriptions, A/V calls, chat, shift scheduling, and an admin portal.",

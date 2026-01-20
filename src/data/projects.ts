@@ -49,9 +49,9 @@ export const projects: Project[] = [
   },
   {
     slug: "betacare-virtual-health",
-    company: "BetaCare",
-    role: "Fullstack Developer",
-    period: "Apr 2025 – Present",
+    company: "Nitax Technologies Limited",
+    role: "Software Engineer",
+    period: "Apr 2025 – Dec 2025",
     stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Agora"],
     kind: "case-study",
     title: "Redefining virtual healthcare for students",

@@ -1,5 +1,6 @@
 export type Project = {
   title: string;
+  company?: string;
   period?: string;
   description: string;
   stack: string[];
@@ -31,6 +32,7 @@ export const projects: Project[] = [
   },
   {
     title: "BetaCare — Telehealth (Web + Mobile)",
+    company: "Nitax Technologies Limited",
     period: "2025 (Contract)",
     description:
       "Full-stack work on doctor–patient consults: subscriptions, audio/video (Agora), chat, shift scheduling, admin portal.",
@@ -78,10 +80,10 @@ export const experience: Experience[] = [
     stack: ["React", "TypeScript", "Node.js", "Tailwind", "CI/CD"],
   },
   {
-    company: "BetaCare",
-    role: "Full-stack Engineer (Contract)",
+    company: "Nitax Technologies Limited",
+    role: "Software Engineer (Contract)",
     type: "Contract",
-    period: "Apr 2025 — Sep 2025",
+    period: "Apr 2025 — Dec 2025",
     location: "Remote",
     bullets: [
       "Built end-to-end telehealth: subscriptions, consults, A/V calls, chat, shifts.",

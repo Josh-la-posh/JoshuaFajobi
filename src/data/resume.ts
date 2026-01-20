@@ -59,13 +59,13 @@ export const resume: JsonResume = {
   $schema: "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   basics: {
     name: "Joshua Fajobi",
-    label: "Frontend Engineer (Web & Mobile)",
+    label: "Senior UI/UX Frontend Developer",
     email: "joshuamayowa23@yahoo.com",
     phone: "+2348102513974",
     url: "https://joshua-fajobi.vercel.app/",
     location: { city: "Lagos", countryCode: "NG" },
     summary:
-      "Frontend engineer focused on performant, accessible product experiences. React (Vite/Next.js), TypeScript, Flutter. Comfortable owning UI architecture, DX, and shipping outcomes.",
+      "Senior Frontend Developer with 4+ years of experience crafting performant, accessible, and visually compelling user interfaces. Expertise in React, TypeScript, and modern design systems. Proven track record of translating wireframes and prototypes into production-ready, responsive web applications. Passionate about bridging design and development to deliver seamless digital experiences. Experienced in component library architecture, cross-browser optimization, and collaborative Agile workflows.",
     profiles: [
       { network: "LinkedIn", url: "https://www.linkedin.com/in/jfajobi/" },
       { network: "GitHub", url: "https://github.com/Josh-la-posh" },
@@ -91,11 +91,11 @@ export const resume: JsonResume = {
       ],
     },
     {
-      name: "BetaCare",
-      position: "Fullstack Developer",
+      name: "Nitax Technologies Limited",
+      position: "Software Engineer",
       url: "https://www.betacare.ng",
       startDate: "2025-04",
-      endDate: "2025-09",
+      endDate: "2025-12",
       summary:
         "Telehealth subscriptions, audio/video consults, shift scheduling & admin ops.",
       highlights: [
@@ -197,10 +197,11 @@ export const resume: JsonResume = {
   ],
 
   skills: [
-    { name: "Frontend", keywords: ["React", "Vite", "Next.js", "TypeScript", "Tailwind"] },
-    { name: "Mobile", keywords: ["Flutter", "GetX", "Offline caching"] },
-    { name: "Backend (working knowledge)", keywords: ["Node.js", "PostgreSQL", "REST", "AWS"] },
-    { name: "Tooling", keywords: ["TanStack Query", "Zustand", "MSW", "Sentry"] },
+    { name: "Frontend Development", keywords: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"] },
+    { name: "UI/UX & Design Tools", keywords: ["Figma", "Component Libraries", "Design Systems", "Shadcn UI", "Accessibility (WCAG)", "User-Centered Design"] },
+    { name: "Mobile Development", keywords: ["Flutter", "Dart", "Cross-Platform", "Offline Caching"] },
+    { name: "Build Tools & DevOps", keywords: ["Git", "GitHub", "GitLab", "NPM", "Vite", "Webpack", "CI/CD"] },
+    { name: "Backend & Infrastructure", keywords: ["Node.js", "PostgreSQL", "REST APIs", "AWS", "Vercel"] },
   ],
 
   education: [
