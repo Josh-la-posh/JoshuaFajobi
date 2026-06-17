@@ -2,6 +2,7 @@ export type CSStat = { label: string; value: string; sub?: string };
 export type CSMedia = { src: string; alt: string; caption?: string; aspect?: string };
 export type CSStep = { title: string; detail?: string; media?: CSMedia };
 export type CSBeforeAfter = { before: string; after: string };
+export type CSJourneyStep = { title: string; detail: string; image?: CSMedia };
 
 export type CaseStudy = {
   slug: string;
@@ -13,6 +14,8 @@ export type CaseStudy = {
   tags: string[];
   hero?: CSMedia;
   gallery?: CSMedia[];
+  journey?: CSJourneyStep[];
+  capabilityHighlights?: string[];
   problem: string;
   constraints?: string[];
   approach: CSStep[];
@@ -375,9 +378,24 @@ export const caseStudies: CaseStudy[] = [
         caption: "Sign-up flow for creating a new Pouch account and starting wallet access.",
       },
       {
+        src: "/images/projects/pouch/verification.jpeg",
+        alt: "Pouch identity verification screen.",
+        caption: "Identity verification flow for preparing users to move money securely.",
+      },
+      {
+        src: "/images/projects/pouch/verification2.jpeg",
+        alt: "Pouch verification status screen.",
+        caption: "Verification status and security context before sensitive financial actions.",
+      },
+      {
         src: "/images/projects/pouch/homepage.jpeg",
         alt: "Pouch home dashboard with wallet balances and quick actions.",
         caption: "Dashboard for balances, quick actions, active negotiations, exchange rates, and recent activity.",
+      },
+      {
+        src: "/images/projects/pouch/deposit.jpeg",
+        alt: "Pouch wallet deposit screen.",
+        caption: "Wallet funding flow for adding money before exchange or withdrawal actions.",
       },
       {
         src: "/images/projects/pouch/market-offers.jpeg",
@@ -400,9 +418,75 @@ export const caseStudies: CaseStudy[] = [
         caption: "Swap completion state confirming that a currency exchange action has been processed.",
       },
       {
+        src: "/images/projects/pouch/withdrawal.jpeg",
+        alt: "Pouch withdrawal screen.",
+        caption: "Withdrawal flow for sending funds out after wallet and exchange activity.",
+      },
+      {
         src: "/images/projects/pouch/security.jpeg",
         alt: "Pouch transaction PIN and biometric security screen.",
         caption: "Transaction PIN, biometric authentication, and guarded financial actions.",
+      },
+    ],
+    capabilityHighlights: [
+      "Multi-currency wallets",
+      "Currency exchange",
+      "Wallet funding",
+      "Withdrawals",
+      "Transaction history",
+      "Secure authentication",
+      "Rate management",
+    ],
+    journey: [
+      {
+        title: "Create Account",
+        detail:
+          "New users move from onboarding into account creation with a focused sign-up flow built for a financial product.",
+        image: {
+          src: "/images/projects/pouch/signUp.jpeg",
+          alt: "Pouch account creation screen.",
+          caption: "Create Account",
+        },
+      },
+      {
+        title: "Verify Identity",
+        detail:
+          "Security and verification flows protect financial actions before users move money through the platform.",
+        image: {
+          src: "/images/projects/pouch/verification.jpeg",
+          alt: "Pouch identity verification screen.",
+          caption: "Verify Identity",
+        },
+      },
+      {
+        title: "Fund Wallet",
+        detail:
+          "Users can prepare their wallet for swaps and withdrawals from the main dashboard and wallet funding flows.",
+        image: {
+          src: "/images/projects/pouch/deposit.jpeg",
+          alt: "Pouch wallet deposit screen.",
+          caption: "Fund Wallet",
+        },
+      },
+      {
+        title: "Exchange Currency",
+        detail:
+          "Users browse market offers, create exchange offers, review rates, and complete guided swap actions.",
+        image: {
+          src: "/images/projects/pouch/market-offers.jpeg",
+          alt: "Pouch market offers screen for browsing exchange offers.",
+          caption: "Exchange Currency",
+        },
+      },
+      {
+        title: "Withdraw Funds",
+        detail:
+          "After exchanging currency, users can send money out through withdrawal and bank account workflows.",
+        image: {
+          src: "/images/projects/pouch/withdrawal.jpeg",
+          alt: "Pouch withdrawal screen.",
+          caption: "Withdraw Funds",
+        },
       },
     ],
     problem:
@@ -517,14 +601,34 @@ export const caseStudies: CaseStudy[] = [
         caption: "User management table with status tabs, search, account details, verification context, and export support.",
       },
       {
+        src: "/images/projects/pouch/user-management.jpeg",
+        alt: "Pouch user management screen with account and verification controls.",
+        caption: "User Management: account review, search, status context, verification details, and support workflows.",
+      },
+      {
         src: "/images/projects/pouch/transactions-table.jpeg",
         alt: "Pouch admin transactions table with filters and export tools.",
         caption: "Transaction operations view for filtering, exporting, and reviewing wallet and exchange activity.",
       },
       {
+        src: "/images/projects/pouch/transactions.jpeg",
+        alt: "Pouch transactions management screen.",
+        caption: "Transactions: operational review for wallet activity, exchange actions, filters, and exports.",
+      },
+      {
+        src: "/images/projects/pouch/currency-management.jpeg",
+        alt: "Pouch currency management screen for rates and supported currencies.",
+        caption: "Currency Management: supported currencies, rate controls, fee context, and financial configuration.",
+      },
+      {
         src: "/images/projects/pouch/manual-funding.jpeg",
         alt: "Pouch manual funding approval table.",
         caption: "Manual funding review queue for approving or rejecting eligible funding requests with detail modals.",
+      },
+      {
+        src: "/images/projects/pouch/funding-requests.jpeg",
+        alt: "Pouch funding requests screen for reviewing wallet deposits.",
+        caption: "Funding Requests: review queue for wallet deposits, approvals, rejection states, and finance checks.",
       },
       {
         src: "/images/projects/pouch/wallet-provider.jpeg",
@@ -535,6 +639,11 @@ export const caseStudies: CaseStudy[] = [
         src: "/images/projects/pouch/role-permissions.jpeg",
         alt: "Pouch role creation screen with grouped permissions.",
         caption: "Role creation workflow with grouped permissions and search for safer least-privilege access patterns.",
+      },
+      {
+        src: "/images/projects/pouch/roles-permissions.jpeg",
+        alt: "Pouch roles and permissions screen.",
+        caption: "Roles & Permissions: internal access control for admins, finance, support, and operations users.",
       },
     ],
     problem:

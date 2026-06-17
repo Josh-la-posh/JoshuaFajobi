@@ -12,6 +12,8 @@ import { CSFooterLinks } from "@/components/case-study/CSFooterLinks";
 import { CSProductGallery } from "@/components/case-study/CSProductGallery";
 import { CSArchitectureDiagram } from "@/components/case-study/CSArchitectureDiagram";
 import { CSBeforeAfter } from "@/components/case-study/CSBeforeAfter";
+import { CSCapabilityHighlights } from "@/components/case-study/CSCapabilityHighlights";
+import { CSJourney } from "@/components/case-study/CSJourney";
 
 function publicFileExists(src: string) {
   return existsSync(path.join(process.cwd(), "public", src.replace(/^\//, "")));
@@ -43,6 +45,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const cs = caseStudies.find((c) => c.slug === slug);
   if (!cs) return notFound();
   const gallery = cs.gallery?.filter((image) => publicFileExists(image.src)) ?? [];
+  const journey =
+    cs.journey?.map((step) => ({
+      ...step,
+      image: step.image && publicFileExists(step.image.src) ? step.image : undefined,
+    })) ?? [];
 
   return (
     <article>
@@ -59,6 +66,18 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <li key={c}>{c}</li>
             ))}
           </ul>
+        </CSSection>
+      ) : null}
+
+      {cs.capabilityHighlights?.length ? (
+        <CSSection title="Core Capabilities">
+          <CSCapabilityHighlights items={cs.capabilityHighlights} />
+        </CSSection>
+      ) : null}
+
+      {journey.length ? (
+        <CSSection title="Core User Journey">
+          <CSJourney steps={journey} />
         </CSSection>
       ) : null}
 
