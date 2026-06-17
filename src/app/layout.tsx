@@ -8,15 +8,15 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://joshua-fajobi.verce
 
 export const metadata: Metadata = {
   title: {
-    default: "Joshua Fajobi — Frontend Engineer",
+    default: "Joshua Fajobi - Full-Stack Product Engineer",
     template: "%s | Joshua Fajobi",
   },
-  description: "Frontend Engineer (React/Next.js/Flutter) with product thinking.",
+  description: "Full-Stack Product Engineer building fintech, healthcare, SaaS, and internal operations platforms.",
   metadataBase: new URL(siteUrl),
   manifest: "/manifest.json",
   openGraph: {
-    title: "Joshua Fajobi — Frontend Engineer",
-    description: "React, Next.js, Flutter | Product-minded, performance-focused.",
+    title: "Joshua Fajobi - Full-Stack Product Engineer",
+    description: "Fintech, healthcare, SaaS, payments, dashboards, and mobile product systems.",
     url: siteUrl,
     siteName: "Joshua Fajobi",
     images: [{ url: "/og.svg", width: 1200, height: 630, alt: "Joshua Fajobi Portfolio" }],
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Joshua Fajobi — Frontend Engineer",
-    description: "React, Next.js, Flutter | Product-minded, performance-focused.",
+    title: "Joshua Fajobi - Full-Stack Product Engineer",
+    description: "Fintech, healthcare, SaaS, payments, dashboards, and mobile product systems.",
     images: ["/og.svg"],
   },
   robots: {
@@ -56,7 +56,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen antialiased font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {/* Skip to content link for accessibility */}
           <a
             href="#main-content"
             className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-white"

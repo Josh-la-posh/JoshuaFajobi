@@ -62,7 +62,7 @@ function Bullet({ children }: { children: string }) {
   const parts = children.split(/(\b\d+(?:[.,]\d+)?%?\+?\b)/g).filter(Boolean);
   return (
     <View style={styles.bulletWrap}>
-      <Text style={styles.bulletDot}>•</Text>
+      <Text style={styles.bulletDot}>-</Text>
       <Text style={styles.bulletText}>
         {parts.map((p, i) => /\b\d+(?:[.,]\d+)?%?\+?\b/.test(p) ? <Text key={i} style={styles.metric}>{p}</Text> : <Text key={i}>{p}</Text>)}
       </Text>
@@ -151,7 +151,7 @@ export function ResumePDF({ data }: { data: JsonResume }) {
                     <Text style={styles.h3}>{w.position}</Text>
                     <Text style={styles.muted}>at {w.name}</Text>
                   </View>
-                  <Text style={styles.light}>{formatDate(w.startDate)} – {formatDate(w.endDate)}</Text>
+                  <Text style={styles.light}>{formatDate(w.startDate)} - {formatDate(w.endDate)}</Text>
                 </View>
                 {w.url && <Link src={w.url}><Text style={[styles.link, { fontSize: FONT.small }]}>{w.url}</Text></Link>}
                 {w.summary && <Text style={{ marginTop: SP * 0.5 }}>{w.summary}</Text>}
@@ -210,7 +210,7 @@ export function ResumePDF({ data }: { data: JsonResume }) {
               <View key={i} style={styles.card}>
                 <View style={styles.cardHeader}>
                   <Text style={styles.h3}>{e.institution}</Text>
-                  <Text style={styles.light}>{formatDate(e.startDate)} – {formatDate(e.endDate)}</Text>
+                  <Text style={styles.light}>{formatDate(e.startDate)} - {formatDate(e.endDate)}</Text>
                 </View>
                 <Text style={styles.muted}>{[e.studyType, e.area].filter(Boolean).join(" in ")}</Text>
               </View>
@@ -247,7 +247,7 @@ export function ResumePDF({ data }: { data: JsonResume }) {
 
         {/* Footer */}
         <View style={styles.footer} fixed>
-          <Text>{data.basics.name} • {data.basics.email}</Text>
+          <Text>{data.basics.name} / {data.basics.email}</Text>
           <Text render={({ pageNumber, totalPages }) => `Page ${pageNumber} of ${totalPages}`} />
         </View>
       </Page>

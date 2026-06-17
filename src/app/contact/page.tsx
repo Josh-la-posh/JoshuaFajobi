@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { z } from "zod";
-import { Mail, MapPin, Phone, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Phone, CheckCircle, AlertCircle, CheckCircle2 } from "lucide-react";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -15,6 +15,14 @@ const contactInfo = [
   { icon: Mail, label: "Email", value: "joshuamayowa23@yahoo.com", href: "mailto:joshuamayowa23@yahoo.com" },
   { icon: Phone, label: "Phone", value: "+234 810 251 3974", href: "tel:+2348102513974" },
   { icon: MapPin, label: "Location", value: "Lagos, Nigeria", href: null },
+];
+
+const typicalEngagements = [
+  "Flutter mobile apps",
+  "Healthcare platforms",
+  "Fintech dashboards",
+  "Admin systems",
+  "MVP development",
 ];
 
 export default function ContactPage() {
@@ -45,9 +53,10 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto max-w-4xl">
-      <h1 className="text-2xl font-bold">Let&apos;s Talk</h1>
+      <h1 className="text-2xl font-bold">Book a Call</h1>
       <p className="mt-2 text-muted">
-        Have a project in mind or want to discuss opportunities? I&apos;d love to hear from you.
+        Tell me what you are building, where the product is stuck, or what workflow needs to ship.
+        I will reply so we can schedule the right next conversation.
       </p>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-5">
@@ -75,10 +84,10 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-xl border border-border bg-card p-6">
-            <h2 className="font-semibold">Availability</h2>
+            <h2 className="font-semibold">What I Can Help With</h2>
             <p className="mt-2 text-sm text-muted">
-              Open to remote &amp; hybrid roles across EMEA. Currently accepting freelance projects
-              and full-time opportunities.
+              Wallet systems, healthcare enrollment, admin dashboards, subscription platforms,
+              payment integrations, and Flutter or React product builds.
             </p>
             <div className="mt-4 flex gap-2">
               <a
@@ -99,12 +108,24 @@ export default function ContactPage() {
               </a>
             </div>
           </div>
+
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h2 className="font-semibold">Typical Engagements</h2>
+            <ul className="mt-4 space-y-2 text-sm leading-6">
+              {typicalEngagements.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <CheckCircle2 className="mt-1 h-4 w-4 flex-none text-primary" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Contact Form */}
         <div className="lg:col-span-3">
           <div className="rounded-xl border border-border bg-card p-6">
-            <h2 className="font-semibold text-foreground">Send a Message</h2>
+            <h2 className="font-semibold text-foreground">Start the Conversation</h2>
 
             {status === "success" && (
               <div className="mt-4 flex items-center gap-2 rounded-lg bg-green-500/10 p-3 text-green-600 dark:text-green-400">
@@ -159,7 +180,7 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   {...register("message")}
-                  placeholder="Tell me about your project or opportunity..."
+                  placeholder="Tell me what you want to build, fix, or launch..."
                   rows={5}
                   className="mt-1 w-full resize-none rounded-lg border border-border bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
@@ -171,9 +192,9 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-foreground transition hover:bg-primary/90 disabled:opacity-50 cursor-pointer"
+                className="w-full rounded-full bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700 disabled:opacity-50 cursor-pointer"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "Sending..." : "Request a Call"}
               </button>
             </form>
           </div>

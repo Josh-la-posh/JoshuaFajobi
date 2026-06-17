@@ -8,7 +8,7 @@
   <rect width="100%" height="100%" fill="url(#bg)"/>
   <text x="600" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle">BetaCare</text>
   <text x="600" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#94a3b8" text-anchor="middle">Telehealth Platform</text>
-  <text x="600" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#64748b" text-anchor="middle">Next.js • Node.js • PostgreSQL • Agora • Flutter</text>
+  <text x="600" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#64748b" text-anchor="middle">Next.js | Node.js | PostgreSQL | Agora | Flutter</text>
   <rect x="100" y="520" width="120" height="8" rx="4" fill="#22c55e"/>
   <text x="100" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8" text-anchor="start">+28% Consults</text>
   <rect x="540" y="520" width="120" height="8" rx="4" fill="#3b82f6"/>

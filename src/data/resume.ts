@@ -1,4 +1,3 @@
-// src/data/resume.ts
 import { projects } from "@/lib/data";
 
 export type JsonResume = {
@@ -12,15 +11,15 @@ export type JsonResume = {
     location?: { city?: string; countryCode?: string };
     summary?: string;
     profiles?: { network: string; username?: string; url?: string }[];
-    availability?: string; // e.g., "Open to remote roles across EMEA"
-    workAuthorization?: string; // e.g., visas or status
+    availability?: string;
+    workAuthorization?: string;
   };
   work: {
     name: string;
     position: string;
     url?: string;
-    startDate?: string; // YYYY-MM
-    endDate?: string;   // YYYY-MM or undefined for present
+    startDate?: string;
+    endDate?: string;
     summary?: string;
     highlights?: string[];
   }[];
@@ -34,9 +33,9 @@ export type JsonResume = {
   }[];
   products?: {
     name: string;
-    platform: string; // e.g., Web, iOS, Android, Cross-platform
+    platform: string;
     description?: string;
-    url?: string; // store or live URL
+    url?: string;
     stack?: string[];
   }[];
   skills?: {
@@ -50,7 +49,7 @@ export type JsonResume = {
     startDate?: string;
     endDate?: string;
   }[];
-  achievements?: string[]; // curated cross-role impact bullets
+  achievements?: string[];
   certifications?: { name: string; issuer?: string; date?: string; url?: string }[];
   languages?: { language: string; fluency?: string }[];
 };
@@ -59,35 +58,34 @@ export const resume: JsonResume = {
   $schema: "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   basics: {
     name: "Joshua Fajobi",
-    label: "Senior UI/UX Frontend Developer",
+    label: "Full-Stack Product Engineer | Fintech, Healthcare, SaaS",
     email: "joshuamayowa23@yahoo.com",
     phone: "+2348102513974",
     url: "https://joshua-fajobi.vercel.app/",
     location: { city: "Lagos", countryCode: "NG" },
     summary:
-      "Senior Frontend Developer with 4+ years of experience crafting performant, accessible, and visually compelling user interfaces. Expertise in React, TypeScript, and modern design systems. Proven track record of translating wireframes and prototypes into production-ready, responsive web applications. Passionate about bridging design and development to deliver seamless digital experiences. Experienced in component library architecture, cross-browser optimization, and collaborative Agile workflows.",
+      "Full-Stack Product Engineer with 4+ years of experience shipping fintech, healthcare, SaaS, and internal operations platforms. I build payment systems, healthcare enrollment flows, telehealth products, subscription workflows, dashboards, mobile apps, and API-backed business systems.",
     profiles: [
       { network: "LinkedIn", url: "https://www.linkedin.com/in/jfajobi/" },
       { network: "GitHub", url: "https://github.com/Josh-la-posh" },
       { network: "Portfolio", url: "https://joshua-fajobi.vercel.app/" },
     ],
-    availability: "Open to remote & hybrid roles across EMEA",
-    workAuthorization: "Eligible to work in Nigeria; remote collaboration globally",
+    availability: "Open to remote and hybrid roles across EMEA",
+    workAuthorization: "Eligible to work in Nigeria; available for global remote collaboration",
   },
 
   work: [
     {
       name: "ChamsSwitch",
-      position: "Lead Frontend Developer",
+      position: "Lead Product Engineer",
       url: "https://www.chamsswitch.com/",
       startDate: "2024-09",
-      endDate: undefined,
       summary:
-        "Lead FE across merchant dashboard, admin console, and payment gateway.",
+        "Led product engineering across merchant dashboard, admin console, payment gateway, and shared UI systems.",
       highlights: [
-        "Shared component system with Vite + TS",
-        "Faster data-heavy pages via pagination & caching",
-        "Role-based protection, responsive & accessible UI",
+        "Built shared Vite, React, TypeScript, and Tailwind component patterns across product surfaces.",
+        "Improved data-heavy pages with pagination, caching, and clearer loading/error states.",
+        "Implemented role-based route protection and responsive, accessible UI flows.",
       ],
     },
     {
@@ -97,23 +95,23 @@ export const resume: JsonResume = {
       startDate: "2025-04",
       endDate: "2025-12",
       summary:
-        "Telehealth subscriptions, audio/video consults, shift scheduling & admin ops.",
+        "Built telehealth subscriptions, doctor-patient consults, audio/video calls, scheduling, and admin operations.",
       highlights: [
-        "30% reduction in failed consultations",
-        "15% increase in subscription renewals",
-        "Agora calls, Node.js APIs, Postgres, AWS",
+        "Reduced failed consultations by 30% through call reliability and reconnect improvements.",
+        "Helped increase subscription renewals by 15% with clearer flows and admin visibility.",
+        "Worked across Next.js, Flutter, Node.js APIs, PostgreSQL, AWS, and Agora.",
       ],
     },
     {
-      name: "Currency Exchange",
-      position: "Frontend Developer",
+      name: "Pouch",
+      position: "Product Engineer",
       startDate: "2024-05",
       endDate: "2024-12",
       summary:
-        "Flutter mobile app + React admin with real-time rates & offline caching.",
+        "Built a Flutter mobile currency exchange app for wallets, offers, swaps, withdrawals, verification, and transaction security.",
       highlights: [
-        "Historical charts & favorites",
-        "Secure auth & robust error states",
+        "Delivered multi-currency wallets, market offers, negotiations, instant swaps, and withdrawal flows.",
+        "Implemented cache-first wallet data, Smile ID verification, Firebase notifications, biometrics, and transaction PIN flows.",
       ],
     },
     {
@@ -122,26 +120,26 @@ export const resume: JsonResume = {
       url: "https://apps.apple.com/ng/app/touramp-customer/id6639614324",
       startDate: "2023-02",
       endDate: "2023-08",
-      summary: "Driver & customer apps (Uber-like).",
-      highlights: ["Live trips & booking flows"],
+      summary: "Built driver and customer Flutter apps for ride booking and live trip flows.",
+      highlights: ["Delivered booking, profile, maps, and trip-state experiences."],
     },
     {
       name: "Bimbs Tech",
-      position: "Frontend Developer",
+      position: "Product Engineer",
       url: "https://www.oponeko.com",
       startDate: "2022-04",
       endDate: "2022-10",
-      summary: "School management platform.",
-      highlights: ["React + Vite + Tailwind"],
+      summary: "Built school management modules with React, Vite, and Tailwind.",
+      highlights: ["Worked on attendance, grading, roles, and school portal flows."],
     },
     {
       name: "Health Station",
-      position: "Frontend Developer",
+      position: "Product Engineer",
       startDate: "2022-01",
       endDate: "2024-06",
       summary:
-        "Web & mobile apps for doctor–patient consultation, booking & history.",
-      highlights: ["React + Flutter; iOS app in store"],
+        "Built web and mobile apps for doctor-patient consultation, booking, and patient history.",
+      highlights: ["Worked across React and Flutter, including multi-platform care workflows."],
     },
   ],
 
@@ -157,51 +155,50 @@ export const resume: JsonResume = {
     {
       name: "ChamsSwitch Merchant Dashboard",
       platform: "Web",
-      description: "Payment gateway flows, merchant onboarding, dashboards.",
-      url: "https://www.chamsswitch.com/", // main site; replace with direct app URL if available
+      description: "Payment gateway flows, merchant onboarding, dashboards, and internal tools.",
+      url: "https://www.chamsswitch.com/",
       stack: ["React", "TypeScript", "TanStack Query", "Zustand"],
     },
     {
       name: "BetaCare Telehealth Platform",
       platform: "Web + Mobile",
-      description: "Subscriptions, audio/video consults, scheduling, admin portal.",
+      description: "Subscriptions, audio/video consults, scheduling, referrals, and admin portal.",
       url: "https://www.betacare.ng",
       stack: ["Next.js", "Flutter", "Node.js", "PostgreSQL", "AWS"],
     },
     {
-      name: "Currency Exchange App",
-      platform: "Mobile (Flutter)",
-      description: "Real-time FX rates, charts, offline caching.",
-      stack: ["Flutter", "GetX"],
+      name: "Pouch Mobile Currency Exchange App",
+      platform: "Mobile",
+      description: "Multi-currency wallets, market offers, instant swaps, withdrawals, verification, and transaction security.",
+      stack: ["Flutter", "GetX", "Dio", "Smile ID"],
     },
     {
       name: "Ride-Hailing App",
-      platform: "Mobile (Flutter)",
-      description: "Driver & rider booking flows, live trips, maps integration.",
+      platform: "Mobile",
+      description: "Driver and rider booking flows, live trips, maps integration, and auth.",
       url: "https://apps.apple.com/ng/app/touramp-customer/id6639614324",
       stack: ["Flutter", "Firebase"],
     },
     {
       name: "School Management Platform",
       platform: "Web",
-      description: "Attendance, grading, roles, ID cards.",
+      description: "Attendance, grading, roles, ID cards, and school operations.",
       url: "https://www.oponeko.com",
       stack: ["React", "Vite", "Tailwind"],
     },
     {
       name: "Health Station Apps",
       platform: "Web + Mobile",
-      description: "Consultations, booking, patient history, multi-platform.",
+      description: "Consultations, booking, patient history, and multi-platform care flows.",
       stack: ["React", "Flutter"],
     },
   ],
 
   skills: [
-    { name: "Frontend Development", keywords: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"] },
-    { name: "UI/UX & Design Tools", keywords: ["Figma", "Component Libraries", "Design Systems", "Shadcn UI", "Accessibility (WCAG)", "User-Centered Design"] },
-    { name: "Mobile Development", keywords: ["Flutter", "Dart", "Cross-Platform", "Offline Caching"] },
-    { name: "Build Tools & DevOps", keywords: ["Git", "GitHub", "GitLab", "NPM", "Vite", "Webpack", "CI/CD"] },
-    { name: "Backend & Infrastructure", keywords: ["Node.js", "PostgreSQL", "REST APIs", "AWS", "Vercel"] },
+    { name: "Product Platforms", keywords: ["Fintech Systems", "Healthcare Platforms", "SaaS Products", "Admin Dashboards", "Subscription Workflows"] },
+    { name: "Payments & Operations", keywords: ["Wallets", "Payment Integrations", "Merchant Tools", "Role-Based Access", "Reporting"] },
+    { name: "Web & Mobile Delivery", keywords: ["Flutter", "React", "Next.js", "TypeScript", "Node.js", "REST APIs"] },
+    { name: "Execution", keywords: ["Product Scoping", "UX Flows", "Design Systems", "Performance", "Deployment"] },
   ],
 
   education: [
@@ -215,10 +212,10 @@ export const resume: JsonResume = {
   ],
 
   achievements: [
-    "15% increase in subscription renewals (BetaCare)",
-    "30% reduction in failed consultations (BetaCare)",
-    "Shared component system reducing duplicate UI by ~40% (ChamsSwitch)",
-    "Pagination & caching strategy improving load times on data-heavy pages (ChamsSwitch)",
+    "30% reduction in failed consultations on BetaCare.",
+    "15% increase in subscription renewals on BetaCare.",
+    "Shared component system reducing duplicate UI by ~40% on ChamsSwitch.",
+    "Pagination and caching strategy improving load times on data-heavy ChamsSwitch pages.",
   ],
 
   certifications: [
